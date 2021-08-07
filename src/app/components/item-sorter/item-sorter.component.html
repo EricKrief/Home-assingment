@@ -1,0 +1,7 @@
+<mat-form-field appearance="fill" [ngClass]="{'mat-form-field__active': activeSortType}">
+    <mat-label>Sort by</mat-label>
+    <mat-select (selectionChange)="sortTypeSelected($event.value)">
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let sortType of sortTypes" [value]="sortType">{{sortType}}</mat-option>
+    </mat-select>
+</mat-form-field>

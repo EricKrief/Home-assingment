@@ -1,0 +1,44 @@
+$active-color:#ffcc00;
+
+.all-filters__container{
+    display: flex;
+    align-items: center;
+    padding-right: 70px;
+}
+
+.filter-image{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    &:hover{
+        width: 21px;
+        height: 21px;
+    }
+}
+
+.filter-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
+    margin: 0px 20px;
+}
+
+.active{
+    color: $active-color;
+}
+
+.icon-filter{
+    display: flex;
+    align-items: center;
+}
+
+.icon-filter:before {
+    cursor: pointer;
+    font-size: 30px;
+  }
+
+  .icon-filter__active:before{
+      color: $active-color;
+  }

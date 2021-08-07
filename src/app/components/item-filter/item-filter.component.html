@@ -1,0 +1,19 @@
+<div class="all-filters__container">
+    <ng-container *ngIf="showFilters">
+        <div *ngFor="let filter of filters">
+            <div class="filter-container">
+                <mat-label [ngClass]="{'active': filter.isActive}">{{filter.type}}</mat-label>
+                <div class="filter-container__age">
+                    <mat-label>From</mat-label>
+                    <mat-slider thumbLabel aria-label="units" min="{{filter.min}}" max="{{filter.max}}"
+                        (change)="onSliderChange(filter, $event.value)" [(ngModel)]="filter.from"></mat-slider>
+                    <mat-label>To</mat-label>
+                    <mat-slider thumbLabel aria-label="units" min="{{filter.min}}" max="{{filter.max}}"
+                        (change)="onSliderChange(filter, $event.value)" [(ngModel)]="filter.to"></mat-slider>
+                </div>
+                <button mat-raised-button (click)="resetFilter(filter)">Reset</button>
+            </div>
+        </div>
+    </ng-container>
+    <span class="icon-filter" [ngClass]="{'icon-filter__active': filtersAreActive}" (click)="toggleFilters()"></span>
+</div>

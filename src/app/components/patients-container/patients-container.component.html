@@ -1,0 +1,12 @@
+<app-patients-view-controller (onSortTypeSelected)="onSortTypeSelected($event)"
+    (onUpdateFilterStatus)="onUpdateFilterStatus($event)">
+</app-patients-view-controller>
+<div class="outer-container">
+    <div class="inner-container">
+        <app-patient-item *ngFor="let patient of currentlyDisplayedPatients" [patient]="patient"></app-patient-item>
+    </div>
+    <mat-spinner *ngIf="showSpinnerCounter > 0"></mat-spinner>
+    <div class="message__container" *ngIf="loadedAllPatients">
+        All patients have been loaded
+    </div>
+</div>

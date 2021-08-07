@@ -1,0 +1,24 @@
+<div class="patient__container">
+    <div class="patient-data">
+        <span>Name: {{patient.name}}</span>
+        <span>Age: {{patient.age}}</span>
+        <span>Accepted offers: {{patient.acceptedOffers}}</span>
+        <span>Canceled offers: {{patient.canceledOffers}}</span>
+        <div>
+            <span>
+                Average reply time:
+            </span>
+            <span [ngClass]="{
+            'reply-time__hours': patient.averageReplyTime > 3600,
+            'reply-time__minutes': patient.averageReplyTime > 60 && patient.averageReplyTime < 3600,
+            'reply-time__seconds': patient.averageReplyTime < 60
+        }">
+                {{patient.averageReplyTime | replyTime}}
+            </span>
+        </div>
+    </div>
+
+    <div *ngIf="patient.image" class="image__container">
+        <img src="{{patient.image}}">
+    </div>
+</div>

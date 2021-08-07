@@ -1,0 +1,25 @@
+.outer-container{
+    background-color: #f0f0f0;
+    padding: 500px 30px;
+    padding-top: 150px;
+}
+
+.inner-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.mat-spinner{
+    top: -10%;
+    left: 50%;
+}
+
+.message__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 200;
+    margin-top: 100px;
+}

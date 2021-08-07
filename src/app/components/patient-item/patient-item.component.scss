@@ -1,0 +1,35 @@
+.patient__container{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    gap: 15px;
+    padding: 10px;
+    height: 200px;
+    background-color: white;
+
+    img{
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.patient-data{
+    display: flex;
+    flex-flow: column;
+    padding: 0px;
+    justify-content: space-between;
+}
+
+.reply-time__hours{
+    color: #ff4444;
+}
+
+.reply-time__minutes{
+    color: #ffbb33;
+}
+
+.reply-time__seconds{
+    color: #00c851;
+}

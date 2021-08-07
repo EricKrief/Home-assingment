@@ -1,0 +1,4 @@
+<div class="controllers-container">
+    <app-item-sorter [sortTypes]="sortTypes" (onSortTypeSelected)="sortTypeSelected($event)"></app-item-sorter>
+    <app-item-filter [filters]="filters" (updateFilterStatus)="updateFilterStatus($event)"></app-item-filter>
+</div>

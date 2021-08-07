@@ -1,0 +1,13 @@
+.mat-form-field{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 70px;
+
+    &__active{
+        border: 2px solid #3f51b5;
+    }
+}
+
+::ng-deep .mat-select-panel{
+    margin-top: 40px;
+}
